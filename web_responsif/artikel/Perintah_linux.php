@@ -1,0 +1,100 @@
+<?php
+// Deklarasikan judul
+$title = "Mahir Perintah Linux";
+$favicon = "";
+// deklarasikan url 
+// $url = "http://" .$_SERVER['SERVER_ADDR']. "/web_responsif/";
+$url = "http://localhost/web_responsif/";
+// Sertakan file header
+include_once(__DIR__ . "/../includes/header.php");
+?>
+
+<main>
+    <section class="artikel">
+        <div class="header-teks">
+            <h2>Mahir perintah dasar linux untuk pemula</h2>
+            <div class="description">
+                <p class="date_created">13 Juni 2025</p>
+                <p class="author_content">Pande saguna</p>
+            </div>
+        </div>
+        <div class="img_artikel">
+            <img src="<?=$url?>img/kali_linux.png" alt="linux">
+        </div>
+        <div class="paragraf_artikel">
+            <!-- Pendahuluan -->
+            <p>Linux adalah kernel dari sistem operasi berbasis Unix yang bersifat sumber terbuka dan gratis. Dibuat oleh seorang mahasiswa bernama Linus Torvalds pada tahun 91. Linux pada dasarnya adalah kernel, yaitu bagian inti dari sistem operasi yang mengelola sumber daya perangkat keras dan berkomunikasi antara perangkat lunak dan perangkat keras. Linux menjadi sistem operasi populer di komputer server karena berbagai alasan, di antaranya:</p>
+            <ol>
+                <li>Gratis</li>
+                <p>Linux dapat digunakan tanpa biaya lisensi dan kode sumbernya terbuka untuk dimodifikasi.</p>
+                <li>Ringan dan cepat</li>
+                <p>Penggunaan resource sistem operasi linux terutama RAM dan CPU nya cukup ringan, terlebih lagi yang versi CLI</p>
+                <li>Stabilitas dan keamananya yang terjamin</li>
+                <p> Linux terkenal sangat stabil, jarang crash, dan dapat berjalan dalam waktu lama tanpa perlu restart. Selain itu, Sistem keamanan Linux sangat baik, sehingga lebih tahan terhadap serangan malware dan virus.</p>
+                <li> Komunitas Besar </li>
+                <p>Dukungan komunitas yang luas memudahkan pengguna untuk mendapatkan bantuan dan dokumentasi.</p>
+            </ol>
+            <p>Namun dari sekian keungggulan linux, ada beberapa kekurangan dari linux yaitu:</p>
+            <ol>
+                <li>Kurang Mendukung Software Populer</li>
+                <p> Beberapa aplikasi populer di Windows atau Mac tidak tersedia di Linux seperti ms office, meski ada alternatifnya.</p>
+                <li>Kompatibilitas Hardware</li>
+                <p>Tidak semua perangkat keras (hardware) didukung secara sempurna, terutama perangkat keluaran terbaru.</p>
+                <li>Hanya cocok  untuk penggunaan tertentu.</li>
+                <p>Linux sangat cocok untuk penggunaan seperti coding, server, dan casual seperti mengolah dokumen. Akan tetapi masih kurang untuk video editing, dan desain grafis.</p>
+                <li>Butuh belajar perintah terminal</li>
+                <p>Meskipun linux sudah banyak mengunakan tampilan grafis yang memukau dan fiturnya juga banyak,terminal di linux masih diperlukan karena terminal adalah cara utama dan efisien untuk mengakses sistem operasi secara menyeluruh.</p>
+            </ol>
+            <p>Terminal memberikan kecepatan, efisiensi, dan kontrol penuh pada sistem Linux, sehingga administrator dan pengguna linux harus mengetahui apa saja perintah-perintah yang tersedia di terminal linux. Ingat, perintah di linux bersifat case sensitive, yang dimana huruf besar dan kecil dianggap berbeda.</p>
+            <!-- Pendahuluan -->
+        </div>
+        <div class="header-teks">
+            <!-- Konten utama (isi) -->
+            <h2>Jadi, apa saja perintah di terminal linux?</h2>
+            <p>Beberapaa perintah yang sering digunakan antara lain:</p>
+        </div>
+        <div class="paragraf_artikel">
+            <h5>Perintah untuk manajemen file</h5>
+            <ol>
+                <li>cd</li>
+                <p>Perintah <code>cd</code> digunakan untuk berpindah direktori atau folder, baik masuk ataupun keluar dari direktori tertentu. Sintaksnya adalah:</p>
+                <pre>cd &lt;tujuan_direktori&gt;</pre>
+                <pre>cd home&#47;pandaijaringan&#47;Documents</pre>
+                <p>Untuk kembali ke direktori sebelumnya, anda bisa mengetikan titik 2 kali seperti ini: </p>
+                <code>cd ..&#47;</code>
+                <li>dir atau ls</li>
+                <p>Perintah <code>dir</code> atau <code>ls</code> digunakan untuk melihat isi dari direktori tertentu, seperti file dan folder nya. Contohnya sebagai berikut:</p>
+                <pre>ls Documents</pre>
+                <p>Ingat, perintah diatas bersifat case-sensitive, jadi huruf besar dan huruf kecil dianggap berbeda.</p>
+                <li>mkdir</li>
+                <p><code>mkdir</code> adalah perintah untuk membuat folder&#47;direktori baru. Contohnya sebagai berikut:</p>
+                <pre>mkdir nama_folder</pre>
+                <li>Cat</li>
+                <p>Perintah <code>cat</code> digunakan untuk membuka file dengan format teks, sperti txt, html, md dll. Akan tetapi tidak bisa membuka file dengan format document, gambar video, dan audio. Contohnya adalah:</p>
+                <pre>cat filecatatan.txt</pre>
+                <li>Touch</li>
+                <p>Perintah <code>touch</code> digunakan untuk membuat file baru berformat teks, seperti txt, html, dll. Contohnta adalah:</p>
+                <pre>touch catatan.txt</pre>
+                <li>Nano</li>
+                <p>Perintah <code>nano</code> digunakan untuk mengedit file berformat teks, seperti txt, html, dll. Contohnta adalah:</p>
+                <pre>nano catatan.txt</pre>
+                <li>Pwd</li>
+                <p>Perintah <code>pwd</code> digunakan untuk melihat posisi direktori saat ini. Contohnya sebagai berikut:</p>
+                <pre>pwd</pre>
+                <pre>/home/pandaijaringan/</pre>
+                <li>cp (copy)</li>
+                <p>Perintah <code>cp</code> digunakan untuk meyalin file ke folder tertentu. Contohnya sebagai berikut:</p>
+                <pre>cp file.txt direktori_tujuan</pre>
+                <li>mv</li>
+                <p>Sama ceperti perintah <code>cp</code>, hanya saja perintah <code>mv</code> digunakan untuk memindahkan file ke direktori tertentu. Sintaknya adalah:</p>
+                <pre>mv file.txt direktori_tujuan</pre>
+                <li>rm</li>
+                <p>rm digunakan untuk menghapus file.</p>
+            </ol>
+            
+            <!-- Konten utama (isi) -->
+        </div>
+    </section>
+</main>
+<!-- Footer -->
+ <?php include_once (__DIR__ . "/../includes/footer.php");?>
