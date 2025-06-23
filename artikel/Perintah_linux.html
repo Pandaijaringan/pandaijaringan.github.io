@@ -1,14 +1,17 @@
-<?php
-// Deklarasikan judul
-$title = "Mahir Perintah Linux";
-$favicon = "";
-// deklarasikan url 
-// $url = "http://" .$_SERVER['SERVER_ADDR']. "/web_responsif/";
-$url = "http://localhost/web_responsif/";
-// Sertakan file header
-include_once(__DIR__ . "/../includes/header.php");
-?>
+<script> // Import file header
+fetch('pandaijaringan.github.io/index.html')
+  .then(response => response.text())
+  .then(data => {
+    // Mengambil baris tertentu (misalnya, baris ke-1 hingga ke-64)
+    const lines = data.split('\n');
+    const selectedLines = lines.slice(0, 64);
+    const htmlToImport = selectedLines.join('\n');
 
+    // Menampilkan konten yang diimpor
+    document.getElementById('header').innerHTML = htmlToImport;
+  });
+</script>
+<div id="header"></div>
 <main>
     <section class="artikel">
         <div class="header-teks">
