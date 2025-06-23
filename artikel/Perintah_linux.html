@@ -22,7 +22,7 @@ fetch('/../index.html')
             </div>
         </div>
         <div class="img_artikel">
-            <img src="<?=$url?>img/kali_linux.png" alt="linux">
+            <img src="https://pandaijaringan.github.io/img/kali_linux.png" alt="linux">
         </div>
         <div class="paragraf_artikel">
             <!-- Pendahuluan -->
@@ -97,7 +97,21 @@ fetch('/../index.html')
             
             <!-- Konten utama (isi) -->
         </div>
+
+      
     </section>
 </main>
 <!-- Footer -->
- 
+ <script> // Import file footer
+fetch('/../index.html')
+  .then(response => response.text())
+  .then(data => {
+    // Mengambil baris tertentu 
+    const lines = data.split('\n');
+    const selectedLines = lines.slice(174, 28);
+    const htmlToImport = selectedLines.join('\n');
+
+    // Menampilkan konten yang diimpor
+    document.getElementById('header').innerHTML = htmlToImport;
+  });
+</script>
