@@ -1,0 +1,446 @@
+/* Reset ukuran css menjadi 0 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* Memberi font default untuk semua elemen */
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    /* Memberi warna background abu-abu pada body */
+    background-color: #808080;
+}
+/* Styling tag navigasi */
+/* navigtasi */
+nav {
+    /* Memberi background color putih */
+    background-color: white;
+    /* Membuat elemen judul dan navbar menjadi berdampingan secara mendatar */
+    display: flex;
+    /* Memisahkan tombol navigasi dan logo, dimana tombol navigasi bergerak ke kanan. */
+    justify-content: space-between;
+    /* Membuat elemen rata tengah secara vertikal */
+    align-items: center;
+    /* Memberi jarak pada semua elemen nav dan logo, atas-bawah, kanan-kiri */
+    padding: 1.5rem 2rem;
+    /* Mengatur lebar heading dan bar navigasi */
+    width: 100%;
+    /* Membuat navbar terkunci */
+    position: fixed;
+    /* Tempel di bagian paling atas layar */
+    top: 0;
+    left: 0;
+    right: 0;
+    /* Agar tidak tertutup elemen lain */
+    z-index: 1000;
+}
+/* Styling child nav yaitu tag ul */
+nav ul {
+    /* Membuat elemen teks navbar menjadi berdampingan secara mendatar */
+    display: flex;
+    /* Menghilangkan bullet sehingga navigasi menjadi bersih */
+    list-style: none;
+    /* Membuat elemen text navbar sejajar di tengah secara vertikal */
+    align-items: center;
+    /* Memberikan jarak antar tulisan navbar */
+    gap: 1.2rem;
+    
+}
+/* Styling tag anchor navigasi */
+nav ul li a, nav ul li p {
+    /* Menghilangkan format tulisan sehinga text navigasi menjadi bersih */
+    text-decoration: none;
+    /* Memberi font pada text navigasi */
+    font-family: "Poppins", sans-serif;
+    /* Memberi warna tulisan navigasi */
+    color: #0a0d0e;
+    /* Mengatur tebal tulisan navbar */
+    font-weight: 400;
+    /* Memberi jarak pada semua elemen tulisan navigasi, atas-bawah, kanan-kiri */
+    padding: 4px 0;
+    /* Memberi efek transisi pada saat kursor diarahkan */
+    transition: all;
+    /* Durasi transisi */
+    transition-duration: 300ms;
+    /* Properti yang akan ditransisikan */
+    border-bottom: 1.2px solid rgba(8, 166, 219, 0);
+    /* Membuat kursor menjadi telunjuk */
+    cursor: pointer;
+}
+
+.navbar-items {
+   position: relative;
+   /* Mempaskan tulisan navigasi agar tidak lewat pembatas */
+   text-wrap: nowrap;
+}
+/* styling dropdown */
+nav .dropdown {
+   position: absolute;
+   /* Agar elemen dropdown tidak muncul jika tidak diklik */
+   display: none;
+   background-color: white;
+   /* margin-top: 10px; */
+   padding: 10px;
+   top: 100%;
+   left: 0;
+}
+
+nav .dropdown.expand {
+    /* Menampilkan dropdown jika class expand ditambahkan */
+    display: block;
+    /* Mempaskan tulisan dengan border */
+    width: fit-content;
+    /* Membuat dropdown berada di atas tulisan navigasi */
+    z-index: 1000;
+    /* Membuat border pada class expand */
+    border: 1px solid #ccc;
+    /* Membuat sudut border menjadi melengkung */   
+    border-radius: 4px;
+    /* Memberi efek bayangan pada dropdown */
+    box-shadow: 8px 8px 0  rgba(0, 0, 0, 0.3);
+    /* Animasi pada dropdown */
+    animation: dropdown 0.3s ease-in-out;
+}
+
+/* Memberi animasi pada dropdown */
+@keyframes dropdown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Memberi syyling pada kotak pencarian */
+nav > .search-container input {
+    /* Membuat kotak pencarian menjadi responsive */
+    width: 100%;
+    /* Memberi tinggi pada kotak pencarian */
+    height: fit-content;
+    /* Membuat kotak pencarian rata tengah secara vertikal */
+    justify-content: center;
+    /* Memberi font pada kotak pencarian */
+    font-family: "Poppins", sans-serif;
+    /* Menghilangkan garis bawah pada kotak pencarian */
+    border: 2px solid #4de755;
+    /* Membuat sudut kotak pencarian menjadi melengkung */  
+    border-radius: 4px;
+    /* Memberi warna pada teks kotak pencarian */
+    color: black;
+    /* Memberi warna background pada kotak pencarian */
+    background-color: white;
+    /* Memberi padding pada kotak pencarian */
+    padding: 0.5rem 1rem;
+    /* Memberi efek transisi pada kotak pencarian */
+    transition:  300ms ease-in-out;
+}
+nav > .search-container input:hover {
+    /* Memberi efek garis bawah pada kotak pencarian */
+    border: 1.9px solid rgb(8, 166, 219);
+    /* Memberi warna pada teks kotak pencarian */
+    color: rgb(8, 166, 219);
+}
+/* memberi styling pada judul web */
+.judul-web {
+    /* Membuat elemen judul menjadi berdampingan secara mendatar */
+    display: flex;
+    /* Memberi font pada judul */
+    font-family: "Helvetica", sans-serif;
+}
+/* Membuat efek tertentu jika kursor diarahkan ke text navigasi */
+nav ul li a:hover {
+    /* Memberi efek garis bawah */
+    border-bottom: 1.2px solid rgb(8, 166, 219);
+    /* Memberi warna pada teks */
+    color: rgb(8, 166, 219);
+    /* Membuat cursor menjadi telunjuk */
+    cursor: pointer;
+}
+#titik3 {
+    /* Menyembunyikan titik 3 jika ukuran layar penuh (desktop) */
+    display: none;
+}
+/* Jika ukuran layar <=1080px (tablet, hp) maka css khusus akan dieksekusi */
+@media only screen and (max-width : 1080px) {
+    nav {
+        flex-wrap: wrap;
+        /* max-width: 600px; */
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding-top: 30px;
+    }
+    nav .sembunyi {
+        display: none;
+    } 
+    #titik3 {
+        font-size: 28px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+     .search-container {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Tengah horizontal */
+        align-items: center;     /* Tengah vertikal */
+        padding: 10px 0;
+    /* Memberi jarak antarea tulisan navbar dengan kotak pencarian */
+        margin-top: 1.2rem;
+    }
+
+    .search-container input {
+        width: 80%;             /* Atur lebar input */
+        padding: 0.5rem 1rem;
+        border: 2px solid #4de755;
+        border-radius: 4px;
+        font-family: "Poppins", sans-serif;
+    }
+
+    /* Main */
+    /* Styling wrapper artikel */
+    .wrapper-artikel {
+        /* membuat display menjadi menurun */
+        display: block !important;
+    }
+    .konten-artikel {
+        /* Membuat elemen rata tengah horizontal */
+        margin: 20px auto;
+    }
+    /* Akhir media query */
+}
+/* /navigasi */
+
+/* Kontenn */
+main {
+   /* background: url("img/komputer.jpg") ; */
+     padding-top: 80px;
+}
+
+.slider-container {
+    /* margin: auto;
+    border-radius: 5px;
+    padding-top: 0px; */
+    width: 100vw;
+    position: sticky;
+    height: 100vh;
+    overflow: hidden;
+    background-attachment: fixed; 
+}
+
+.slider-gambar {
+    /* display: flex; */
+    position: sticky;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-gambar img {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover; 
+    position: absolute;
+    opacity: 0;
+    transition: opacity is ease-in-out;
+}
+
+.overlay-latar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* ubah angka ini untuk lebih gelap/terang */
+    z-index: 1;
+}
+
+.konten-utama {
+    position: absolute;
+    width: 90%;
+    font-family: "Roboto", sans-serif;
+    /* ⬅️ Tengah secara horizontal dan vertikal */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 2;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4); /* opasity latar */
+    padding: 20px;
+    border-radius: 10px;
+}
+.konten-utama > p {
+    margin-top: 20px;
+}
+/* Tombol */
+.overview-aksi {
+    /* position: absolute; */
+    z-index: 2;
+    /* top: 70%;
+    left: 10%; */
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-family: "Poppins", sans-serif;
+    /* transform: translateX(-50%); agar tombol benar-benar di tengah horizontal */
+    background-color: #08a6db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-position 0.3s ease;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, #08a6db 0%, #0dcaf0 100%);
+}
+
+.overview-aksi:hover {
+    background-position: right center;
+}
+/* Section artikel */
+.artikel {
+    background-color:white;
+    /* Memberi padding di dalam class artikel */
+    padding: 30px 15px;
+    width: 100vw;
+}
+
+.artikel > h2 {
+    /* Mengatur ukuran font artikel */
+    font-size: 30px;
+    /* Mengatur font family */
+    font-family: "Roboto", sans-serif;
+    /* Mengatur teks rata tengah */
+    text-align: center;
+}
+/* shadow code, mengatur elemen setelah tulisan artikel */
+.artikel > h2::after {
+    /* Konten kosong */
+    content: "";
+    /* Mengatur garis bawah */
+    border-bottom: 5.2px solid blue;
+    /* Mengatur lebar konten */
+    width: 60px;
+    /* Menampilkan elemen */
+    display: block;
+    /* Mengatur margin */
+    margin: 20px auto;
+}
+
+/* Memberi style pada wrapper artikel */
+.wrapper-artikel, .wrapper {
+    /* Membuat elemen wrapper artikel menjadi mendatar */
+    display: flex;
+    /* Membuat elemen wrapper artikel disusun secara mendatar */
+    flex-direction: row;
+    /* Memberi jarak antar list artikel */
+    gap: 20px;
+    /* Memberi padding pada wrapper artikel */
+    padding: 20px;
+    /* Membuat elemen wrapper artikel menjadi responsive */
+    flex-wrap: nowrap;
+}
+.konten-artikel, .konten {
+    /* Memberi border pada list artikel */
+    border: 1px solid black;
+    /* memperhalus sudut border */
+    border-radius: 4px;
+    /* Membuat elemen kotak konten artikel disusun secara mendatar */
+    /* display: flex; */
+    width: 75%;
+    padding: 10px;
+    height: 25%;
+    word-wrap: break-word;      /* Potong kata panjang agar tidak keluar kotak */
+    overflow-wrap: break-word;  /* Fallback untuk browser lain */
+    max-width: 100%;            /* Batas maksimal lebar konten sesuai lebar kotak */
+    box-sizing: border-box;     /* Pastikan padding/border dihitung dalam lebar kotak */
+}
+
+.konten-artikel > * {
+    /* Memberi jarak antar elemen konten artikel */
+    margin-bottom: 10px;
+}
+/* Memberi style pada h4 konten-artikel */
+.konten-artikel > h4 {
+    font-size: 20px;
+    text-align: center;
+}
+/* Atur lebar maksimal agar konten tidak lewat batas */
+.konten-artikel > p, .konten-artikel > h4 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Memberi style pada konten artikel gambar */
+.konten-artikel > img {
+    width: 60%;
+    /* Biar gambar mengikuti tinggi konten */
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+    display: block;
+    box-sizing: border-box;
+    
+}
+/* Memberi style pada tombol artikel */
+
+.wrapper-artikel > .konten-artikel > button {
+    /* Membuat tombol artikel menjadi kotak */
+    display: flex;
+    /* Membuat tombol artikel disusun secara mendatar */
+    flex-direction: row;
+    /* Memberi jarak antar tulisan dan gambar pada tombol artikel */
+    gap: 10px;
+    /* Memberi padding pada tombol artikel */
+    padding: 10px;
+    /* Membuat tombol artikel menjadi responsive */
+    width: 100%;
+    /* Memperhalus sudut kotak tombol */
+    border-radius: 4px;
+    border-style: none;
+    background-color: rgb(11, 141, 216);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    /* Memberi efek transisi pada teks tombol artikel */
+    /* transition: all; */
+    /* Durasi transisi */
+    /* transition-duration: 300ms; */
+    /* Properti yang akan ditransisikan */
+    /* border-bottom: 1.2px solid rgba(8, 166, 219, 0); */
+}
+.wrapper-artikel > .konten-artikel > button > a {
+    /* Membersihkan performataan teks */
+    text-decoration: none;
+    /* Memberi font pada teks tombol artikel */
+    font-family: "Poppins", sans-serif;
+    /* Memberi warna pada teks tombol artikel */
+    color: black;
+    /* Agar tulisan tidak lewat border */
+    width: 100%;
+}
+
+/* Menampilkan atau menyembunyikan konten */
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    height: 10%;
+    text-align: center;
+}
