@@ -1,38 +1,19 @@
 // navbar titrik 3
-function initNavbar() {
-  const navbar = document.getElementById("navbar");
-  const searchContainer = document.querySelector(".search-container");
-  const titik3 = document.getElementById("titik3");
-
-  function toogleMobileMenu() {
-    [navbar, searchContainer].forEach(el => el.classList.toggle("hidden"));
-  }
-
-  function handleResponsiveMenu() {
-    const cari = document.getElementById("Cari");
-    if (window.innerWidth > 1000) {
-      navbar.classList.remove("hidden");
-      searchContainer.classList.remove("hidden");
-    } else {
-      if (document.activeElement === cari) return;
-      navbar.classList.add("hidden");
-      searchContainer.classList.add("hidden");
-    }
-  }
-
-  if (titik3) {
-    titik3.addEventListener("click", toogleMobileMenu);
-  }
-
-  handleResponsiveMenu();
-  window.addEventListener("resize", handleResponsiveMenu);
+const searchContainer = document.querySelector(".search-container");
+const navbar = document.getElementById("navbar");
+// Loading
+const loading = document.querySelector(".loading");
+function loader () {
+  setInterval(loading.classList.add("hidden"), 1500);
+}
+function toogleMobileMenu(){
+  [navbar, searchContainer].forEach(el => el.classList.toggle("hidden"));
 }
 // Fungsi yang dijalankan pertama kali saat mulai membuka halaman web
 window.onload=function(){
   const titik3 = document.getElementById("titik3");
   loader();
-  initNavbar();
-  // titik3.addEventListener("click", toogleMobileMenu, true);
+  titik3.addEventListener("click", toogleMobileMenu, true);
   handleResponsiveMenu(); // panggil saat halaman dimuat
   window.addEventListener("resize", handleResponsiveMenu, true); // panggil saat resize
   filterData();
