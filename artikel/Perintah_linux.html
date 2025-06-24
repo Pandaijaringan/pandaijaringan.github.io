@@ -21,7 +21,7 @@ Promise.all([headerPromise, footerPromise]).then(() => {
   searchContainer = document.querySelector(".search-container");
   navbar = document.getElementById("navbar");
   titik3 = document.getElementById("titik3");
-  initNavbar();
+  titik3.addEventListener("click", toogleMobileMenu, true);
   // dst...
 });
 </script>
