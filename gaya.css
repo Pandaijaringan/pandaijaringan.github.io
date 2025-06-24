@@ -479,6 +479,11 @@ pre, code, .coding {
     /* Membuat elemen wrapper artikel menjadi responsive */
     flex-wrap: nowrap;
 }
+
+/* Memberi styling pada opsi sselect */
+.wrapper .wrapper_select {
+    margin-left: 20px;
+}
 .preview-artikel, .preview_content {
     /* Memberi border pada list artikel */
     border: 1px solid black;
@@ -495,23 +500,23 @@ pre, code, .coding {
     box-sizing: border-box;     /* Pastikan padding/border dihitung dalam lebar kotak */
 }
 
-.preview-artikel > * {
+.preview-artikel > *, .preview_content > * {
     /* Memberi jarak antar elemen konten artikel */
     margin-bottom: 10px;
 }
 /* Memberi style pada h4 preview-artikel */
-.preview-artikel > h4 {
+.preview-artikel > h4, .preview_content > h4 {
     font-size: 20px;
     text-align: center;
 }
 /* Atur lebar maksimal agar konten tidak lewat batas */
-.preview-artikel > p, .preview-artikel > h4 {
+.preview-artikel > p, .preview-artikel > h4, .preview_content h4 p{
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
 
 /* Memberi style pada konten artikel gambar */
-.preview-artikel > img {
+.preview-artikel > img, .preview_content > img {
     width: 60%;
     /* Biar gambar mengikuti tinggi konten */
     height: auto;
