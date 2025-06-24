@@ -455,8 +455,7 @@ font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  padding: 10px;
-  border: 1px solid blue;
+  padding: 1px;
 }
 /* shadow code, mengatur elemen setelah tulisan artikel */
 .artikel_home > h2::after, .wrapper > h2::after {
