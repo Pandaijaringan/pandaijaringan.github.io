@@ -2,11 +2,29 @@
 <html lang="id">
 <!-- Include header -->
 <script>
-fetch('https://pandaijaringan.github.io/includes/header.html')
+    // fungsi yang dijalankan pertama kali saat load
+    window.onload=function() {
+        // jalankan load header
+        loadHeader();
+        // Jalankan load footer
+        loadFooter();
+    }
+    // fungsi include header
+    function loadHeader() {
+    fetch('https://pandaijaringan.github.io/includes/header.html')
   .then(res => res.text())
   .then(html => {
     document.getElementById('header').innerHTML = html;
   });
+}
+// Fungsi include footer
+    function loadFooter() {
+ fetch('https://pandaijaringan.github.io/includes/footer.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('footer').innerHTML = html;
+  });
+    }
   let navbar = document.getElementById("navbar");
   let searchContainer = document.querySelector(".search-container");
 //   Memberi title di halaman
@@ -106,14 +124,5 @@ document.title = "Perintah Dasar Linux untuk Pemula | Pandai Jaringan";
 <!-- Footer -->
  <!-- di Perintah_linux.html -->
  <script src="https://pandaijaringan.github.io/script.js"></script>
-<script>
-fetch('https://pandaijaringan.github.io/includes/footer.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('footer').innerHTML = html;
-  });
-  // Untuk menjalankan fungsi init navbar
-  initNavbar();
-</script>
 <div id="footer"></div>
 </html>
