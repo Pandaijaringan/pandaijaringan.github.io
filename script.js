@@ -1,23 +1,35 @@
-let searchContainer = document.querySelector(".search-container");
-// Loading
-const loading = document.querySelector(".loading");
-function loader () {
-  setInterval(loading.classList.add("hidden"), 1500);
-}
-function toogleMobileMenu(){
-  // navbar titrik 3
+function mainInit() {
+  // Semua kode inisialisasi dan event listener di sini
+  let searchContainer = document.querySelector(".search-container");
   let navbar = document.getElementById("navbar");
-  [navbar, searchContainer].forEach(el => el.classList.toggle("hidden"));
-}
-// Fungsi yang dijalankan pertama kali saat mulai membuka halaman web
-window.onload=function(){
   let titik3 = document.getElementById("titik3");
+  const loading = document.querySelector(".loading");
+
+  function loader () {
+    setInterval(() => loading.classList.add("hidden"), 1500);
+  }
+  function toogleMobileMenu(){
+    [navbar, searchContainer].forEach(el => el.classList.toggle("hidden"));
+  }
+  if (titik3) {
+    titik3.addEventListener("click", toogleMobileMenu, true);
+  }
   loader();
-  titik3.addEventListener("click", toogleMobileMenu, true);
+  handleResponsiveMenu();
+  window.addEventListener("resize", handleResponsiveMenu, true);
+  filterData();
+  // ...lanjutkan seluruh kode inisialisasi lain dari script.js...
+}
+
+window.onload=function(){
+  mainInit();
+  loader();
+  toogleMobileMenu();
   handleResponsiveMenu(); // panggil saat halaman dimuat
   window.addEventListener("resize", handleResponsiveMenu, true); // panggil saat resize
   filterData();
 }
+
 
 // navbar include
 function initNavbar() {
@@ -152,4 +164,6 @@ inputCari.addEventListener("input", function() {
 
 
 // /Kotak pencarian
+
+mainInit();
 

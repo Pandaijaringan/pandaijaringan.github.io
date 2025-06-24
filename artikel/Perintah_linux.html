@@ -2,13 +2,10 @@
 <html lang="id">
 <!-- Include header -->
 <script>
-let searchContainer, navbar, titik3; // deklarasi global
-
 const headerPromise = fetch('https://pandaijaringan.github.io/includes/header.html')
   .then(res => res.text())
   .then(html => {
     document.getElementById('header').innerHTML = html;
-    //   Memberi title di halaman
     document.title = "Perintah Dasar Linux untuk Pemula | Pandai Jaringan";
   });
 
@@ -19,24 +16,11 @@ const footerPromise = fetch('https://pandaijaringan.github.io/includes/footer.ht
   });
 
 Promise.all([headerPromise, footerPromise]).then(() => {
-  // Inisialisasi setelah header & footer selesai di-include
-  searchContainer = document.querySelector(".search-container");
-  navbar = document.getElementById("navbar");
-  titik3 = document.getElementById("titik3");
-
-//   titik3.addEventListener("click", toogleMobileMenu, true);
-    initNavbar();
-  // dst...
+  // Jalankan seluruh script.js setelah header & footer selesai
+  if (typeof mainInit === "function") mainInit();
 });
-function initNavbar() {
-  if (titik3 && navbar && searchContainer) {
-    titik3.addEventListener("click", function () {
-      navbar.classList.toggle("hidden");
-      searchContainer.classList.toggle("hidden");
-    });
-  }
-}
 </script>
+<script src="https://pandaijaringan.github.io/script.js"></script>
 <div id="header"></div>
 <main>
     <section class="wrapper">
@@ -129,6 +113,5 @@ function initNavbar() {
 </main>
 <!-- Footer -->
  <!-- di Perintah_linux.html -->
- <script src="https://pandaijaringan.github.io/script.js"></script>
 <div id="footer"></div>
 </html>
