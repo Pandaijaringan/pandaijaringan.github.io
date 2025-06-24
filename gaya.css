@@ -409,7 +409,7 @@ main {
     background-color: #fdffff;
 }
 
-.artikel_home > h2, .artikel_home .header-teks h2, .wrapper > h2 {
+.artikel_home > h2, .wrapper .header-teks h2, .wrapper > h2 {
     /* Mengatur ukuran font artikel */
     font-size: 30px;
     /* Mengatur font family */
