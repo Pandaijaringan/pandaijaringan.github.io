@@ -21,10 +21,12 @@ window.onload=function(){
 
 // navbar include
 function initNavbar() {
-    document.getElementById("titik3").addEventListener("click", function () {
-      document.getElementById("navbar").classList.toggle("hidden");
-      document.querySelector(".search-container").classList.toggle("hidden");
+  if (titik3 && navbar && searchContainer) {
+    titik3.addEventListener("click", function () {
+      navbar.classList.toggle("hidden");
+      searchContainer.classList.toggle("hidden");
     });
+  }
 }
 
 // Fungsi filter data 
