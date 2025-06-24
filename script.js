@@ -1,5 +1,5 @@
 // navbar titrik 3
-const searchContainer = document.querySelector(".search-container");
+let searchContainer = document.querySelector(".search-container");
 let navbar = document.getElementById("navbar");
 // Loading
 const loading = document.querySelector(".loading");

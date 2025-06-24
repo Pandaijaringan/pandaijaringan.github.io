@@ -7,6 +7,8 @@ fetch('https://pandaijaringan.github.io/includes/header.html')
   .then(html => {
     document.getElementById('header').innerHTML = html;
   });
+  let navbar = document.getElementById("navbar");
+  let searchContainer = document.querySelector(".search-container");
 //   Memberi title di halaman
 document.title = "Perintah Dasar Linux untuk Pemula | Pandai Jaringan";
 
@@ -111,7 +113,6 @@ fetch('https://pandaijaringan.github.io/includes/footer.html')
     document.getElementById('footer').innerHTML = html;
   });
   // Untuk menjalankan fungsi init navbar
-  let navbar = document.getElementById("navbar");
   initNavbar();
 </script>
 <div id="footer"></div>
