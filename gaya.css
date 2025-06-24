@@ -259,6 +259,9 @@ nav ul li a:hover {
         border-radius: 4px;
         font-family: "Poppins", sans-serif;
     }
+    .preview-artikel, .preview_content {
+        width: 50% !important;
+    }
     /* Akhir media query */
 }
 
@@ -273,6 +276,7 @@ nav ul li a:hover {
     .preview-artikel, .preview_content {
         /* Membuat elemen rata tengah horizontal */
         margin: 20px auto;
+        width: 75% !important;
     } 
     /* /main */
     /* Styling footer */
