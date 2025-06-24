@@ -1,4 +1,4 @@
-let searchContainer = document.querySelector(".search-container");
+const searchContainer = document.querySelector(".search-container");
 // Loading
 const loading = document.querySelector(".loading");
 function loader () {
@@ -6,12 +6,12 @@ function loader () {
 }
 function toogleMobileMenu(){
   // navbar titrik 3
-  let navbar = document.getElementById("navbar");
+  const navbar = document.getElementById("navbar");
   [navbar, searchContainer].forEach(el => el.classList.toggle("hidden"));
 }
 // Fungsi yang dijalankan pertama kali saat mulai membuka halaman web
 window.onload=function(){
-  let titik3 = document.getElementById("titik3");
+  const titik3 = document.getElementById("titik3");
   const cari = document.getElementById("Cari");
   loader();
   titik3.addEventListener("click", toogleMobileMenu, true);
@@ -72,7 +72,7 @@ function handleResponsiveMenu() {
 // /nav darkmode
 
 // Slideshow
-let slideIndex = 0;
+const slideIndex = 0;
 const slides = document.querySelectorAll(".slider-gambar img");
 
 function showSlides() {
