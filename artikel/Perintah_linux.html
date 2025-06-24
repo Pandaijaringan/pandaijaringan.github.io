@@ -8,6 +8,8 @@ const headerPromise = fetch('https://pandaijaringan.github.io/includes/header.ht
   .then(res => res.text())
   .then(html => {
     document.getElementById('header').innerHTML = html;
+    //   Memberi title di halaman
+    document.title = "Perintah Dasar Linux untuk Pemula | Pandai Jaringan";
   });
 
 const footerPromise = fetch('https://pandaijaringan.github.io/includes/footer.html')
@@ -21,6 +23,7 @@ Promise.all([headerPromise, footerPromise]).then(() => {
   searchContainer = document.querySelector(".search-container");
   navbar = document.getElementById("navbar");
   titik3 = document.getElementById("titik3");
+
 //   titik3.addEventListener("click", toogleMobileMenu, true);
     initNavbar();
   // dst...
