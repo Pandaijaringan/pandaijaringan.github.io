@@ -20,9 +20,9 @@ Promise.all([headerPromise, footerPromise]).then(() => {
   if (typeof mainInit === "function") mainInit();
 });
 
+const searchContainer = document.querySelector(".search-container");
 function mainInit() {
   // Semua kode inisialisasi dan event listener di sini
-  const searchContainer = document.querySelector(".search-container");
   const navbar = document.getElementById("navbar");
   const titik3 = document.getElementById("titik3");
   const loading = document.querySelector(".loading");
