@@ -3,9 +3,9 @@ fetch('/../index.html')
   .then(response => response.text())
   .then(data => {
     // Mengambil baris tertentu (misalnya, baris ke-1 hingga ke-64)
-    const lines = data.split('\n');
-    const selectedLines = lines.slice(0, 64);
-    const htmlToImport = selectedLines.join('\n');
+   let lines = data.split('\n');
+   let selectedLines = lines.slice(0, 64);
+   let htmlToImport = selectedLines.join('\n');
 
     // Menampilkan konten yang diimpor
     document.getElementById('header').innerHTML = htmlToImport;
@@ -107,9 +107,9 @@ fetch('/../index.html')
   .then(response => response.text())
   .then(data => {
     // Mengambil baris tertentu 
-    const lines = data.split('\n');
-    const selectedLines = lines.slice(174, 28);
-    const htmlToImport = selectedLines.join('\n');
+   let lines = data.split('\n');
+   let selectedLines = lines.slice(174, 28);
+   let htmlToImport = selectedLines.join('\n');
 
     // Menampilkan konten yang diimpor
     document.getElementById('footer').innerHTML = htmlToImport;
