@@ -31,7 +31,10 @@ document.title = "Perintah Dasar Linux untuk Pemula | Pandai Jaringan";
     let navbar = document.getElementById("navbar");
     let searchContainer = document.querySelector(".search-container");
   //   Jalankan init navbar
-      initNavbar();
+       document.getElementById("titik3").addEventListener("click", function () {
+      document.getElementById("navbar").classList.toggle("hidden");
+      document.querySelector(".search-container").classList.toggle("hidden");
+    });
 
 </script>
 <div id="header"></div>
