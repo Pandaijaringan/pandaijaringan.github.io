@@ -12,6 +12,7 @@ function toogleMobileMenu(){
 // Fungsi yang dijalankan pertama kali saat mulai membuka halaman web
 window.onload=function(){
   let titik3 = document.getElementById("titik3");
+  const cari = document.getElementById("Cari");
   loader();
   titik3.addEventListener("click", toogleMobileMenu, true);
   handleResponsiveMenu(); // panggil saat halaman dimuat
@@ -51,7 +52,6 @@ function filterData () {
 // Fungsi untuk menampilan/menyembunyikan navigasi
 function handleResponsiveMenu() {
   // Jangan hide saat input sedang fokus
-  const cari = document.getElementById("Cari");
   if (window.innerWidth > 1000) {
     navbar.classList.remove("hidden");
     searchContainer.classList.remove("hidden");
