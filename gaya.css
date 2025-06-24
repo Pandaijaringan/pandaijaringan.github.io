@@ -404,7 +404,7 @@ main {
     /* Agar posisi elemen sedikit dibawah*/
     margin-top: 50px;
 }
-.artikel_home .header-teks {
+.wrapper .header-teks {
     /* Memberi warena background artikel*/
     background-color: #fdffff;
 }
@@ -427,14 +427,14 @@ main {
     margin: 30px auto 40px;
 }
 
-.artikel_home .img_artikel {
+.wrapper .img_artikel {
     /* Membuat gambar menjadi ke tengah */
     display: flex;
     justify-content: center;
     /* Memberi margin bawah */
     margin-bottom: 30px;
 }
-.artikel_home .img_artikel img {
+.wrapper .img_artikel img {
     /* Mengatur lebar maksimal gambar */
     max-width: 90%;
     /* Mengatur lebar gambar */
@@ -444,17 +444,19 @@ main {
     background-repeat: no-repeat;
 }
 
-.artikel_home .paragraf_artikel {
+.wrapper .paragraf_artikel {
     /* Membuat teks menjadi ke tengah */
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 pre, code, .coding {
-    font-family: "Source Code Pro", monospace;
+font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  padding: 10px;
+  border: 1px solid blue;
 }
 /* shadow code, mengatur elemen setelah tulisan artikel */
 .artikel_home > h2::after, .wrapper > h2::after {
