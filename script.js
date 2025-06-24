@@ -11,7 +11,7 @@ function toogleMobileMenu(){
 }
 // Fungsi yang dijalankan pertama kali saat mulai membuka halaman web
 window.onload=function(){
-  const titik3 = document.getElementById("titik3");
+  let titik3 = document.getElementById("titik3");
   loader();
   titik3.addEventListener("click", toogleMobileMenu, true);
   handleResponsiveMenu(); // panggil saat halaman dimuat
