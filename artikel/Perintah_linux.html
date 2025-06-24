@@ -22,9 +22,9 @@ Promise.all([headerPromise, footerPromise]).then(() => {
 
 function mainInit() {
   // Semua kode inisialisasi dan event listener di sini
-  let searchContainer = document.querySelector(".search-container");
-  let navbar = document.getElementById("navbar");
-  let titik3 = document.getElementById("titik3");
+  const searchContainer = document.querySelector(".search-container");
+  const navbar = document.getElementById("navbar");
+  const titik3 = document.getElementById("titik3");
   const loading = document.querySelector(".loading");
 
   function loader () {
