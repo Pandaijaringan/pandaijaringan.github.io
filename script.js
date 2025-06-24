@@ -5,12 +5,12 @@ function loader () {
 }
 function toogleMobileMenu(){
   // navbar titrik 3
-  let searchContainer = document.querySelector(".search-container");
   let navbar = document.getElementById("navbar");
   [navbar, searchContainer].forEach(el => el.classList.toggle("hidden"));
 }
 // Fungsi yang dijalankan pertama kali saat mulai membuka halaman web
 window.onload=function(){
+  let searchContainer = document.querySelector(".search-container");
   let titik3 = document.getElementById("titik3");
   loader();
   titik3.addEventListener("click", toogleMobileMenu, true);
