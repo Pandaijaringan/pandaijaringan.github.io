@@ -1,3 +1,4 @@
+let searchContainer = document.querySelector(".search-container");
 // Loading
 const loading = document.querySelector(".loading");
 function loader () {
@@ -10,7 +11,6 @@ function toogleMobileMenu(){
 }
 // Fungsi yang dijalankan pertama kali saat mulai membuka halaman web
 window.onload=function(){
-  let searchContainer = document.querySelector(".search-container");
   let titik3 = document.getElementById("titik3");
   loader();
   titik3.addEventListener("click", toogleMobileMenu, true);
