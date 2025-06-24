@@ -1,15 +1,12 @@
-<script> // Import file header
-fetch('/../index.html')
-  .then(response => response.text())
-  .then(data => {
-    // Mengambil baris tertentu (misalnya, baris ke-1 hingga ke-64)
-   const linesHeader = data.split('\n');
-   const selectedLinesHeader = linesHeader.slice(0, 64);
-   const htmlHeader = selectedLinesHeader.join('\n');
-
-    // Menampilkan konten yang diimpor
-    document.getElementById('header').innerHTML = htmlHeader;
+<!-- Include header -->
+<script>
+fetch('https://pandaijaringan.github.io/includes/header.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('header').innerHTML = html;
   });
+//   Memberi title di halaman
+document.title = "Perintah Dasar Linux untuk Pemula | Pandai Jaringan";
 </script>
 <div id="header"></div>
 <main>
