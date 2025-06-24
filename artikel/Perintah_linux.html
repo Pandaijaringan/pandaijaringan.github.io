@@ -9,6 +9,7 @@ fetch('https://pandaijaringan.github.io/includes/header.html')
   });
 //   Memberi title di halaman
 document.title = "Perintah Dasar Linux untuk Pemula | Pandai Jaringan";
+
 </script>
 <div id="header"></div>
 <main>
@@ -102,13 +103,15 @@ document.title = "Perintah Dasar Linux untuk Pemula | Pandai Jaringan";
 </main>
 <!-- Footer -->
  <!-- di Perintah_linux.html -->
+ <script src="https://pandaijaringan.github.io/script.js"></script>
 <script>
 fetch('https://pandaijaringan.github.io/includes/footer.html')
   .then(res => res.text())
   .then(html => {
     document.getElementById('footer').innerHTML = html;
   });
+  // Untuk menjalankan fungsi init navbar
+  initNavbar();
 </script>
 <div id="footer"></div>
-<script src="https://pandaijaringan.github.io/script.js"></script>
 </html>

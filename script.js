@@ -19,6 +19,16 @@ window.onload=function(){
   filterData();
 }
 
+// navbar include
+function initNavbar() {
+  if (titik3 && navbar && searchContainer) {
+    titik3.addEventListener("click", function () {
+      navbar.classList.toggle("sembunyi");
+      search.classList.toggle("sembunyi");
+    });
+  }
+}
+
 // Fungsi filter data 
 function filterData () {
   const cari = document.getElementById("Cari");
