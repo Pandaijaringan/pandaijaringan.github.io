@@ -25,6 +25,14 @@ Promise.all([headerPromise, footerPromise]).then(() => {
     initNavbar();
   // dst...
 });
+function initNavbar() {
+  if (titik3 && navbar && searchContainer) {
+    titik3.addEventListener("click", function () {
+      navbar.classList.toggle("hidden");
+      searchContainer.classList.toggle("hidden");
+    });
+  }
+}
 </script>
 <div id="header"></div>
 <main>
