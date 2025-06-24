@@ -108,7 +108,7 @@ fetch('/../index.html')
   .then(data => {
     // Mengambil baris tertentu (misal baris 174-202)
     const linesFooter = data.split('\n');
-    const selectedLinesFooter = linesFooter.slice(174, 199); // 203 agar baris 202 ikut
+    const selectedLinesFooter = linesFooter.slice(174, 203); // 203 agar baris 202 ikut
     const htmlFooter = selectedLinesFooter.join('\n');
 
     // Menampilkan konten yang diimpor
