@@ -491,7 +491,7 @@ pre, code, .coding {
     border-radius: 4px;
     /* Membuat elemen kotak konten artikel disusun secara mendatar */
     /* display: flex; */
-    width: 75%;
+    width: 20%;
     padding: 10px;
     height: 25%;
     word-wrap: break-word;      /* Potong kata panjang agar tidak keluar kotak */
