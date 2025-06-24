@@ -409,7 +409,7 @@ main {
     background-color: #fdffff;
 }
 
-.artikel_home > h2, .wrapper .header-teks h2, .wrapper > h2 {
+.artikel_home > h2, .wrapper .header-teks > h2, .wrapper > h2 {
     /* Mengatur ukuran font artikel */
     font-size: 30px;
     /* Mengatur font family */
@@ -449,7 +449,13 @@ main {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin: 5px 25px;
 }
+
+.wrapper .paragraf_artikel ol {
+    margin: auto 30px;
+}
+
 pre, code, .coding {
 font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
