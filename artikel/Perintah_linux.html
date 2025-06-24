@@ -106,10 +106,10 @@ fetch('/../index.html')
 fetch('/../index.html')
   .then(response => response.text())
   .then(data => {
-    // Mengambil baris tertentu 
-   const linesFooteer = data.split('\n');
-   const selectedLinesFooter = linesFooter.slice(174, 28);
-   const htmlFooter = selectedLinesFooter.join('\n');
+    // Mengambil baris tertentu (misal baris 174-202)
+    const linesFooter = data.split('\n');
+    const selectedLinesFooter = linesFooter.slice(174, 203); // 203 agar baris 202 ikut
+    const htmlFooter = selectedLinesFooter.join('\n');
 
     // Menampilkan konten yang diimpor
     document.getElementById('footer').innerHTML = htmlFooter;
