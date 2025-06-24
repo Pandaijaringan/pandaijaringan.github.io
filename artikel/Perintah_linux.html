@@ -101,19 +101,13 @@ document.title = "Perintah Dasar Linux untuk Pemula | Pandai Jaringan";
     </section>
 </main>
 <!-- Footer -->
- <script> // Import file footer
-fetch('/../index.html')
-  .then(response => response.text())
-  .then(data => {
-    // Mengambil baris tertentu (misal baris 174-202)
-    const linesFooter = data.split('\n');
-    const selectedLinesFooter = linesFooter.slice(174, 203); // 203 agar baris 202 ikut
-    const htmlFooter = selectedLinesFooter.join('\n');
-
-    // Menampilkan konten yang diimpor
-    document.getElementById('footer').innerHTML = htmlFooter;
+ <!-- di Perintah_linux.html -->
+<script>
+fetch('https://pandaijaringan.github.io/includes/footer.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('footer').innerHTML = html;
   });
 </script>
 <div id="footer"></div>
-<script src="https://pandaijaringan.github.io/script.js"></script>
 </html>
