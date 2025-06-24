@@ -1,12 +1,12 @@
-// navbar titrik 3
-let searchContainer = document.querySelector(".search-container");
-let navbar = document.getElementById("navbar");
 // Loading
 const loading = document.querySelector(".loading");
 function loader () {
   setInterval(loading.classList.add("hidden"), 1500);
 }
 function toogleMobileMenu(){
+  // navbar titrik 3
+  let searchContainer = document.querySelector(".search-container");
+  let navbar = document.getElementById("navbar");
   [navbar, searchContainer].forEach(el => el.classList.toggle("hidden"));
 }
 // Fungsi yang dijalankan pertama kali saat mulai membuka halaman web
