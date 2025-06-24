@@ -2,6 +2,8 @@
 <html lang="id">
 <!-- Include header -->
 <script>
+let searchContainer, navbar, titik3; // deklarasi global
+
 const headerPromise = fetch('https://pandaijaringan.github.io/includes/header.html')
   .then(res => res.text())
   .then(html => {
@@ -14,13 +16,11 @@ const footerPromise = fetch('https://pandaijaringan.github.io/includes/footer.ht
     document.getElementById('footer').innerHTML = html;
   });
 
-// Tunggu kedua proses selesai
 Promise.all([headerPromise, footerPromise]).then(() => {
-  // Kode di sini dijalankan setelah header & footer selesai di-include
-  // Misal: inisialisasi variabel, jalankan fungsi, dsb
-  let searchContainer = document.querySelector(".search-container");
-  let navbar = document.getElementById("navbar");
-  let titik3 = document.getElementById("titik3");
+  // Inisialisasi setelah header & footer selesai di-include
+  searchContainer = document.querySelector(".search-container");
+  navbar = document.getElementById("navbar");
+  titik3 = document.getElementById("titik3");
   initNavbar();
   // dst...
 });
