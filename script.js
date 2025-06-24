@@ -23,8 +23,8 @@ window.onload=function(){
 function initNavbar() {
   if (titik3 && navbar && searchContainer) {
     titik3.addEventListener("click", function () {
-      navbar.classList.toggle("sembunyi");
-      searchContainer.classList.toggle("sembunyi");
+      navbar.classList.toggle("hidden");
+      searchContainer.classList.toggle("hidden");
     });
   }
 }
@@ -144,7 +144,7 @@ inputCari.addEventListener("input", function() {
     if (teksArtikel.includes(keyword)) {
       artikel.classList.remove("hidden"); // Tampilkan jika cocok
     } else {
-      artikel.classList.add("hidden"); // Sembunyikan jika tidak cocok
+      artikel.classList.add("hidden"); // hiddenkan jika tidak cocok
     }
   });
 });*/
